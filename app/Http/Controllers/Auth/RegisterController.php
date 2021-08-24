@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
+use Exception;
 
 class RegisterController extends Controller
 {
@@ -64,11 +66,25 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        $user_id='';
+        $status_user_id='1';
+        try {
+            DB::beginTransaction();
+            $User = User::create([
+                'name' => $data['name'],
+                'user_id' => $user_id,
+                'email' => $data['email'],
+                'status_user_id' => $status_user_id,
+                'password' => Hash::make($data['password'])
+            ]);
+
+            $User->save();
+            DB::commit();
+        } catch (Exception $e) {
+            DB::rollBack();
+        }
+
+        return $this->redirectTo;
     }
 
     // Register

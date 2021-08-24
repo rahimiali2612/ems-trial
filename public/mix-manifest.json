@@ -122,6 +122,7 @@
     "/js/scripts/media-gallery-page.js": "/js/scripts/media-gallery-page.js",
     "/js/scripts/media-hover-effects.js": "/js/scripts/media-hover-effects.js",
     "/js/scripts/page-account-settings.js": "/js/scripts/page-account-settings.js",
+    "/js/scripts/page-admin.js": "/js/scripts/page-admin.js",
     "/js/scripts/page-contact.js": "/js/scripts/page-contact.js",
     "/js/scripts/page-item.js": "/js/scripts/page-item.js",
     "/js/scripts/page-knowledge.js": "/js/scripts/page-knowledge.js",
@@ -141,5 +142,6 @@
     "/json/horizontalMenu.json": "/json/horizontalMenu.json",
     "/json/template-list.json": "/json/template-list.json",
     "/json/verticalMenu.json": "/json/verticalMenu.json",
+    "/json/verticalMenu_ori.json": "/json/verticalMenu_ori.json",
     "/js/vendors.min.js": "/js/vendors.min.js"
 }

@@ -139,6 +139,9 @@ return [
     "HeadOfDepartment"=> "Head Of Department",
     "HumanResource"=> "Human Resource",
     "SystemAdmin"=> "System Admin",
-    "Staff"=> "Staff",
+    "Congfiguration"=> "Congfiguration",
+    "Department"=> "Department",
+    "Companies"=> "Companies",
+    "UnitBase"=> "UnitBase",
 ];
 ?>

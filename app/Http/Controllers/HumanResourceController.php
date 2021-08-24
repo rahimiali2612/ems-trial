@@ -13,12 +13,12 @@ class HumanResourceController extends Controller
         $query = DB::raw("(CASE WHEN users.email_verified_at !='' THEN 'Yes' ELSE 'No' END) as email_verified_at");
 
         $columns = [
-            'id','user_id','users.name','email','userstatus.status_user_id',$query,'users.updated_at','userstatus.name as sname'
+            'user_id','users.name','email',$query,'users.updated_at','userstatus.status_name'
         ];
         
 
         $users = DB::table('users')
-                    ->join('userstatus', 'users.status_user_id', 'userstatus.status_user_id')
+                    ->join('userstatus', 'users.status_user_id', 'userstatus.id')
                     ->select($columns)
                     ->get();
                     

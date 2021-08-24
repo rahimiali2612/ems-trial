@@ -10,14 +10,12 @@ class ConfigCompanyController extends Controller
 {
     public function Config_CompanyList()
     {
-        $query = DB::raw("(CASE WHEN users.email_verified_at !='' THEN 'Yes' ELSE 'No' END) as email_verified_at");
 
         $columns = [
-            'id','user_id','users.name','email','userstatus.status_user_id',$query,'users.updated_at','userstatus.name as sname'
+            'id','comp_name'
         ];
         
-        $users = DB::table('users')
-                    ->join('userstatus', 'users.status_user_id', 'userstatus.status_user_id')
+        $companies = DB::table('companies')
                     ->select($columns)
                     ->get();
                     
@@ -26,6 +24,6 @@ class ConfigCompanyController extends Controller
         //Pageheader set true for breadcrumbs
         $pageConfigs = ['pageHeader' => true, 'isFabButton' => true];
 
-        return view('configuration.config-company',['users' => $users ,'pageConfigs' => $pageConfigs , 'breadcrumbs' => $breadcrumbs]);
+        return view('configuration.config-company',['companies' => $companies ,'pageConfigs' => $pageConfigs , 'breadcrumbs' => $breadcrumbs]);
     }
 }

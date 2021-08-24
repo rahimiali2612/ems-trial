@@ -96,7 +96,7 @@
                 <td>{{$user->email_verified_at}}</td>
                 <td>Staff</td>
                 <td><span class="chip green lighten-5">
-                  <span class="green-text">{{$user->sname}}</span>
+                  <span class="green-text">{{$user->status_name}}</span>
                 </span>
               </td>
                 <td><a href="{{asset('page-users-edit')}}"><i class="material-icons">edit</i></a></td>

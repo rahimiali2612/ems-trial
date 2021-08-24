@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserstatusTable extends Migration
+class AddColumnStatusUserToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateUserstatusTable extends Migration
      */
     public function up()
     {
-        Schema::create('userstatus', function (Blueprint $table) {
-            $table->id();
-            $table->string('status_name');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreignId('status_user_id')->constrained('userstatus');
         });
     }
 
@@ -27,6 +25,8 @@ class CreateUserstatusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('userstatus');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('status_user_id');
+        });
     }
 }

@@ -68,8 +68,7 @@ class RegisterController extends Controller
     {
         $user_id='';
         $status_user_id='1';
-        try {
-            DB::beginTransaction();
+        DB::beginTransaction();
             $User = User::create([
                 'name' => $data['name'],
                 'user_id' => $user_id,
@@ -80,9 +79,6 @@ class RegisterController extends Controller
 
             $User->save();
             DB::commit();
-        } catch (Exception $e) {
-            DB::rollBack();
-        }
 
         return $this->redirectTo;
     }

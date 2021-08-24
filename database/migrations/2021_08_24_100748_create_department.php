@@ -15,6 +15,7 @@ class CreateDepartment extends Migration
     {
         Schema::create('department', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->constrained('companies');
             $table->string('dept_name');
             $table->timestamps();
             $table->softDeletes();

@@ -16,7 +16,6 @@ class ConfigDepartmentController extends Controller
             'id','user_id','users.name','email','userstatus.status_user_id',$query,'users.updated_at','userstatus.name as sname'
         ];
         
-
         $users = DB::table('users')
                     ->join('userstatus', 'users.status_user_id', 'userstatus.status_user_id')
                     ->select($columns)

@@ -58,11 +58,15 @@
             </div>
           </div>
           <div class="col s12 m6 l3 display-flex align-items-center show-btn">
-            <button type="submit" class="btn btn-block indigo waves-effect waves-light">Reset</button>
+            <button type="submit" class="btn btn-block indigo waves-effect waves-light">Create User</button>
           </div>
-          <br> <br> <br>
+          <br><br>
           <div class="col s12 m6 l3 display-flex align-items-center show-btn">
-            <button type="submit" class="btn btn-block indigo waves-effect waves-light">Excel</button>
+            <button type="submit" class="btn btn-block indigo waves-effect waves-light">Export Excel</button>
+          </div>
+          <br><br>
+          <div class="col s12 m6 l3 display-flex align-items-center show-btn">
+            <button type="submit" class="btn btn-block indigo waves-effect waves-light">Reset</button>
           </div>
         </form>
       </div>

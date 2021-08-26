@@ -139,7 +139,7 @@ return [
     "HeadOfDepartment"=> "Head Of Department",
     "HumanResource"=> "Human Resource",
     "SystemAdmin"=> "System Admin",
-    "Congfiguration"=> "Congfiguration",
+    "Configuration"=> "Configuration",
     "Department"=> "Department",
     "Companies"=> "Companies",
     "UnitBase"=> "UnitBase",

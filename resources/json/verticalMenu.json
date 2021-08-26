@@ -56,8 +56,8 @@
     },
     {
       "url": "javascript:void(0)",
-      "name": "Congfiguration",
-      "i18n": "Congfiguration",
+      "name": "Configuration",
+      "i18n": "Configuration",
       "class": "collapsible-header waves-effect waves-cyan",
       "icon": "photo_filter",
       "slug": "",

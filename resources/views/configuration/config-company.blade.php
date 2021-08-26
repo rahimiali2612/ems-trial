@@ -29,6 +29,11 @@
       <div class="card">
         <div class="card-content">
           <div class="row">
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+            @endif
             <div class="col s6">
               <h4 class="card-title">Companies List</h4>
             </div>

@@ -35,6 +35,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
   <!-- Include core + vendor Styles -->
   @include('panels.styles')
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 <!-- END: Head-->
@@ -53,8 +54,8 @@ License: You must have a valid license purchased only from themeforest(the above
     </div>
   </div>
   {{-- vendor scripts and page scripts included --}}
+  @include('sweet::alert')
   @include('panels.scripts')
-
 </body>
 
 </html>

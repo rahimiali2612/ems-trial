@@ -36,6 +36,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
   <!-- Include core + vendor Styles -->
   <?php echo $__env->make('panels.styles', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 <!-- END: Head-->
@@ -54,8 +55,8 @@ License: You must have a valid license purchased only from themeforest(the above
     </div>
   </div>
   
+  <?php echo $__env->make('sweet::alert', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
   <?php echo $__env->make('panels.scripts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-
 </body>
 
 </html>

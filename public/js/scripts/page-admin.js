@@ -1,17 +1,18 @@
-$(function () {
+$(document).ready(function () {
 
-  // Page Length Option Table
+  // variable declaration
   var usersTable;
   var usersDataArray = [];
-
-  usersTable = $('#admin-list').DataTable({
-    "responsive": true,
-    "lengthMenu": [
-      [10, 25, 50, -1],
-      [10, 25, 50, "All"]
-    ]
-  });
-
+  // datatable initialization
+  if ($("#admin-users-list-datatable").length > 0) {
+    usersTable = $("#admin-users-list-datatable").DataTable({
+      responsive: true,
+      'columnDefs': [{
+        "orderable": false,
+        "targets": [0, 8, 9]
+      }]
+    });
+  };
   // page users list verified filter
   $("#users-list-verified").on("change", function () {
     var usersVerifiedSelect = $("#users-list-verified").val();
@@ -30,5 +31,5 @@ $(function () {
     usersTable.search(usersStatusSelect).draw();
   });
 
- 
-})
+
+});

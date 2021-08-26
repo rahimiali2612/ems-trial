@@ -47,12 +47,40 @@
       "slug": "app-email"
     },
     {
-      "url": "page-users-list",
-      "name": "Staff",
-      "i18n": "Staff",
+      "url": "humanresource",
+      "name": "HumanResource",
+      "i18n": "HumanResource",
       "class": "waves-effect waves-cyan",
          "icon": "face",
       "slug": "users-staff"
+    },
+    {
+      "url": "javascript:void(0)",
+      "name": "Configuration",
+      "i18n": "Configuration",
+      "class": "collapsible-header waves-effect waves-cyan",
+      "icon": "photo_filter",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "con-department",
+          "name": "Department",
+          "i18n": "Department",
+          "slug": ""
+        }, 
+        {
+          "url": "con-unitbase",
+          "name": "UnitBase",
+          "i18n": "UnitBase",
+          "slug": ""
+        }, 
+        {
+          "url": "con-companies",
+          "name": "Companies",
+          "i18n": "Companies",
+          "slug": ""
+        }
+      ]
     },
     {
       "url": "app-email",

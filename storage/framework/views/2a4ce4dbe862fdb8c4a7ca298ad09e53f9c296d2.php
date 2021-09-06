@@ -137,7 +137,7 @@
           </a>
         </li>
         <li>
-          <a class="grey-text text-darken-1" id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST">
+          <a class="grey-text text-darken-1" id="logout-form" href="<?php echo e(route('auth.logout')); ?>">
             <i class="material-icons">keyboard_tab</i>
             Logout
           </a>

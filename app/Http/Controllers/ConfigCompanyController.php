@@ -27,8 +27,6 @@ class ConfigCompanyController extends Controller
         //Pageheader set true for breadcrumbs
         $pageConfigs = ['pageHeader' => true, 'isFabButton' => true];
 
-        SweetAlert::message('Robots are working!');
-
         return view('configuration.config-company',['companies' => $companies ,'pageConfigs' => $pageConfigs , 'breadcrumbs' => $breadcrumbs]);
     }
 

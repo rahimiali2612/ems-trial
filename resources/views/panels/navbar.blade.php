@@ -142,7 +142,7 @@
           </a>
         </li>
         <li>
-          <a class="grey-text text-darken-1" id="logout-form" action="{{ route('logout') }}" method="POST">
+          <a class="grey-text text-darken-1" id="logout-form" href="{{ route('auth.logout') }}">
             <i class="material-icons">keyboard_tab</i>
             Logout
           </a>
